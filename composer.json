@@ -2,14 +2,9 @@
     "name": "inerce/api_1",
     "autoload": {
         "psr-4": {
-            "Inerce\\Api1\\": "src/"
+            "App\\": "app/"
         }
     },
-    "authors": [
-        {
-            "name": "Janis",
-            "email": "janisjekelis@gmail.com"
-        }
-    ],
+
     "require": {}
 }
