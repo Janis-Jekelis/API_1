@@ -6,5 +6,7 @@
         }
     },
 
-    "require": {}
+    "require": {
+        "league/climate": "^3.8"
+    }
 }
