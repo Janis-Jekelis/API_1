@@ -8,6 +8,8 @@ class Application
         public function __construct()
     {
         $searchWord=readline("Enter country: ");
+        $searchWord=trim($searchWord);
+        $searchWord=str_replace(" ", "+", $searchWord);
         $this->database=json_decode(file_get_contents(
             "http://universities.hipolabs.com/search?country=$searchWord"));
     }
@@ -15,7 +17,7 @@ class Application
     {
         $formatText=new CLImate();
                 if(!$this->database){
-            exit("invalid country name:".PHP_EOL);
+            exit("invalid country name!".PHP_EOL);
         }
         $results=new CollectionOfUniversities($this->database);
         foreach ($results->getUniversities() as $university){
